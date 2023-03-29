@@ -32,7 +32,7 @@ fetch('/js/json/games.json')
       items.forEach(item => {
         const game = document.createElement('div');
         game.classList.add('game');
-        game.innerHTML = `<img src="${item.image}" alt="${item.title}" onerror="this.onerror=null; this.src='error-image-white.png'><h2>${item.title}</h2>`;
+        game.innerHTML = `<img src="${item.image}" alt="${item.title}" onerror="this.onerror=null; this.src='/error-image-white.png'><h2>${item.title}</h2>`;
         gamesContainer.appendChild(game);
 
         // Add event listener to the game element to show the iframe popup
