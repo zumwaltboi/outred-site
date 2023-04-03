@@ -1,3 +1,1 @@
-order allow,deny
-deny from 173.235.148.80
-allow from all
+
