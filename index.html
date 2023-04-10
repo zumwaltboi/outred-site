@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="title-favicon.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -236,6 +237,55 @@
           return phrases[Math.floor(Math.random() * phrases.length)];
         }
       </script>
+      <style>
+        .apps {
+ align-items: center;
+ background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+ border: 0;
+ border-radius: 15px;
+ box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+ box-sizing: border-box;
+ color: #FFFFFF;
+ display: flex;
+ font-family: Phantomsans, sans-serif;
+ font-size: 18px;
+ justify-content: center;
+ line-height: 1em;
+ max-width: 100%;
+ min-width: 140px;
+ padding: 3px;
+ text-decoration: none;
+ user-select: none;
+ -webkit-user-select: none;
+ touch-action: manipulation;
+ white-space: nowrap;
+ cursor: pointer;
+ transition: all .3s;
+}
+
+.apps:active,
+.apps:hover {
+ outline: 0;
+}
+
+.apps span {
+ background-color: rgb(5, 6, 45);
+ padding: 16px 24px;
+ border-radius: 12px;
+ width: 80%;
+ height: 100%;
+ transition: 300ms;
+
+}
+
+.apps:hover span {
+ background: none;
+}
+
+.apps:active {
+ transform: scale(0.9);
+}
+      </style>
 </head>
 <body>
     <div class="nav">
@@ -252,7 +302,6 @@
         <div class="dot-flashing"></div>
     </div>
     <br>
-    <br>
     <!-- Start code here -->
     <h1 class="title">OutRed Games</h1>
     <div id="phrase">
@@ -260,9 +309,10 @@
           document.getElementById("phrase").innerHTML = getRandomPhrase();
         </script>
       </div>      
-    <br>
-    <br>
-    <div class="line"></div>
+    <br><br>
+<a href="/g/index.html"><button class="rainbow">Play Now!</button></a><br><br>
+<center><a href="/main/apps.html"><button class="apps"><span class="text">Explore Apps</span></button></a></center>
+    <div style=display:none class="favoritesection">
     <h1 class="title">Favorites</h1>
     <h1>Currently unavailable</h1>
    <center>
@@ -272,6 +322,7 @@
       </div>
     </div>
   </div>
+</div>
   </center>
     <br>
     <br>
@@ -282,12 +333,14 @@
     <br>
     <br>
     <br>
+    <div style=display:none class="appssection">
     <div class="line"></div>
     <h1 class="title">Popular Apps</h1>
     <div class="popularapps"></div>
     <br>
     <br>
     <br>
+    </div>
     <div class="line"></div>
     <script>
       const popup = document.getElementById('popup');
