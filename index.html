@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script src="title-favicon.js"></script>
+  <script type="text/javascript" src="tabcloaking.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +9,7 @@
     <!-- for ad verification-->
     <meta name="monetag" content="92121882c4a0202b764eaf7c559ea9a4">
     <title>OutRed Games</title>
+    <script src="/js/tabcloaking.js"></script>
     <meta content="OutRed Games" property="og:title" />
     <meta content="Unblocked games, apps, proxies, all at your fingertips." property="og:description" />
     <meta content="https://outred.org" property="og:url" />
@@ -30,6 +31,39 @@
   gtag('js', new Date());
 
   gtag('config', 'G-B5MYT5J8LH');
+</script>
+<script>
+  function setTitle() {
+  var title = document.getElementById("title-input").value;
+  document.getElementById("page-title").innerText = title;
+  localStorage.setItem("title", title);
+}
+
+function setFavicon() {
+  var faviconUrl = document.getElementById("favicon-input").value;
+  document.getElementById("favicon").href = faviconUrl;
+  localStorage.setItem("faviconUrl", faviconUrl);
+}
+
+function reset() {
+  document.getElementById("title-input").value = "";
+  document.getElementById("page-title").innerText = "Default Title";
+  document.getElementById("favicon-input").value = "";
+  document.getElementById("favicon").href = "default-favicon.png";
+  localStorage.removeItem("title");
+  localStorage.removeItem("faviconUrl");
+}
+
+// Initialize the title and favicon on page load
+var title = localStorage.getItem("title");
+if (title) {
+  document.getElementById("page-title").innerText = title;
+}
+var faviconUrl = localStorage.getItem("faviconUrl");
+if (faviconUrl) {
+  document.getElementById("favicon").href = faviconUrl;
+}
+
 </script>
 
      <!-- For dynamic phrases -->
